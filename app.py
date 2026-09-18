@@ -290,15 +290,14 @@ def download_drive_files(url):
 
     try:
         if "/folders/" in url:
-            downloaded = gdown.download_folder(
+            downloaded_files = gdown.download_folder(
                 url,
                 output=str(temp_dir),
                 quiet=True,
                 use_cookies=False,
-                remaining_ok=True,
             )
 
-            if not downloaded:
+            if not downloaded_files:
                 return []
 
             files = []
@@ -310,10 +309,9 @@ def download_drive_files(url):
 
         output_path = temp_dir / "drive_file"
         downloaded = gdown.download(
-            url=url,
-            output=str(output_path),
+            url,
+            str(output_path),
             quiet=True,
-            fuzzy=True,
         )
 
         if not downloaded:
