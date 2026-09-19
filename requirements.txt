@@ -1,8 +1,8 @@
 streamlit
-pypdf
-python-docx
 sentence-transformers
 faiss-cpu
 numpy
+pypdf
+python-docx
 groq
 gdown==5.2.0
