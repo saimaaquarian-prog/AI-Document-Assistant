@@ -1,4 +1,4 @@
-```python
+
 import io
 import re
 import hashlib
